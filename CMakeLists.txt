@@ -19,6 +19,8 @@ find_package(
 # Исходные файлы
 set(SOURCES
         main.cc
+        PhysicsWorld.cc
+        PhysicsWorld.h
 )
 
 # Добавление исполняемого файла

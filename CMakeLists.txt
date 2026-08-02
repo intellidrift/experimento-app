@@ -21,6 +21,10 @@ set(SOURCES
         main.cc
         PhysicsWorld.cc
         PhysicsWorld.h
+        Body.cc
+        Body.h
+        LineShape.cc
+        LineShape.h
 )
 
 # Добавление исполняемого файла

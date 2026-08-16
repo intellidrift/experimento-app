@@ -6,21 +6,19 @@
 using namespace sf;
 using namespace std;
 
-class Body {
+struct Body {
     Vector2f position;
     Vector2f velocity;
     Vector2f acceleration;
 
     float mass;
     float invMass;
-    float restitutition;
+    float restitution;
 
-    shared_ptr<Shape> shape;
+    shared_ptr<CircleShape> shape;
 
-public:
-    auto getShape() const { return shape; }
+    explicit Body(const shared_ptr<CircleShape> &shape, const Vector2f &vel = {0, 0}, float m = 1);
 
-    explicit Body(const shared_ptr<Shape> &shape, const Vector2f &vel = {0, 0}, float m = 1);
     virtual ~Body() = default;
     void update(float dt);
     void applyForce(const Vector2f &force);

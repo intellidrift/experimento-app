@@ -23,8 +23,9 @@ class PhysicsWorld {
     vector<shared_ptr<Body>> bodies;
 
     void tick();
-    void update() const;
-
+    void tickBodies() const;
+    void resolveCollision() const;
+    void drawGrid();
 public:
     PhysicsWorld();
     void execute();

@@ -8,12 +8,10 @@ using namespace sf;
 using namespace std;
 
 class LineShape : public RectangleShape {
-
-    RectangleShape shape;
-
-    void draw(RenderTarget &target, RenderStates states) const override;
+    float thickness;
 public:
-    LineShape(const Vector2f &start, const Vector2f &end, float thickness, Color c);
+    LineShape(const Vector2f &start, const Vector2f &end, float thickness, Color c = Color::Black);
+    void computePosition(const Vector2f &start, const Vector2f &end);
 };
 
 #endif // EXPERIMENTO_APP_LINESHAPE_H

@@ -1,8 +1,8 @@
 #include "Body.h"
 
-Body::Body(const shared_ptr<Shape> &shape, const Vector2f &vel, const float m)
+Body::Body(const shared_ptr<CircleShape> &shape, const Vector2f &vel, const float m)
     :  velocity(vel), mass(m), shape(shape) {
-        restitutition = 0.7f;
+        restitution = 0.7f;
         position = shape->getPosition();
         invMass = m > 0.f ? 1.f / m : 0.f;
 }
